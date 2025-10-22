@@ -291,8 +291,3 @@ Ce portfolio est optimisé pour :
 - ✅ Agences de placement
 - ✅ Réseautage professionnel
 - ✅ Entrevues techniques
-
----
-
-**Créé avec ❤️ et Claude AI**  
-*Version 2.0 - Octobre 2025*
