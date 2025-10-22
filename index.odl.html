@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapha ONDOBO - Technicien Informatique | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="./CSS/Style.css">
+</head>
+<body lang="fr">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- SVG Gradients for circular progress -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <linearGradient id="gradient-windows" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient-apple" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient-cloud" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient-ai" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo" onclick="scrollToTop()">RO</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="fr-only">Accueil</a><a href="#home" class="en-only">Home</a></li>
+                <li><a href="#about" class="fr-only">À propos</a><a href="#about" class="en-only">About</a></li>
+                <li><a href="#skills" class="fr-only">Compétences</a><a href="#skills" class="en-only">Skills</a></li>
+                <li><a href="#experience" class="fr-only">Expérience</a><a href="#experience" class="en-only">Experience</a></li>
+                <li><a href="#projects" class="fr-only">Projets</a><a href="#projects" class="en-only">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" title="Changer de thème">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+                <li><button class="lang-switch" onclick="toggleLanguage()">
+                    <i class="fas fa-language"></i> EN / FR
+                </button></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fr-only">Bonjour, je suis<br>Rapha ONDOBO</h1>
+                <h1 class="en-only">Hello, I'm<br>Rapha ONDOBO</h1>
+                <p class="subtitle">
+                    <span class="typing-text fr-only">Technicien Informatique | Support Niveau 2-3</span>
+                    <span class="typing-text en-only">IT Technician | Level 2-3 Support</span>
+                </p>
+                <p class="fr-only">
+                    Plus de 8 ans d'expérience en support IT, administration systèmes et réseaux. 
+                    Expert en environnements Windows (10/11/Server), Apple (macOS, iOS), Linux et cloud (Microsoft 365, Google Workspace).
+                    Utilisation d'outils d'IA pour optimiser la productivité et l'automatisation.
+                </p>
+                <p class="en-only">
+                    Over 8 years of experience in IT support, system and network administration. 
+                    Expert in Windows (10/11/Server), Apple (macOS, iOS), Linux environments, and cloud (Microsoft 365, Google Workspace).
+                    Using AI tools to optimize productivity and automation.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        <span class="fr-only">Me Contacter</span>
+                        <span class="en-only">Contact Me</span>
+                    </a>
+                    <a href="#experience" class="btn btn-outline">
+                        <i class="fas fa-briefcase"></i>
+                        <span class="fr-only">Voir mon parcours</span>
+                        <span class="en-only">View Experience</span>
+                    </a>
+                </div>
+                <div class="cv-download-section">
+                    <p class="cv-label fr-only"><i class="fas fa-file-download"></i> Télécharger mon CV :</p>
+                    <p class="cv-label en-only"><i class="fas fa-file-download"></i> Download my resume:</p>
+                    <div class="cv-buttons">
+                        <a href="CV_Rapha_ONDOBO_Francais.pdf" download class="btn-cv btn-cv-fr">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>CV Français</span>
+                        </a>
+                        <a href="CV_Rapha_ONDOBO_English.pdf" download class="btn-cv btn-cv-en">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>CV English</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="./IMG/1723152041983.jpg" alt="Rapha ONDOBO">
+                    </div>
+                    <h3>Rapha ONDOBO</h3>
+                    <p class="fr-only">Montréal, QC</p>
+                    <p class="en-only">Montreal, QC</p>
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="fr-only">Disponible pour opportunités</span>
+                        <span class="en-only">Available for opportunities</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/rapha-ondobo" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:raphaondobo@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:5142479379" title="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://github.com/raphaondobo" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title fr-only">À Propos de Moi</h2>
+            <h2 class="section-title en-only">About Me</h2>
+            <p class="section-subtitle fr-only">Découvrez mon parcours et mes compétences</p>
+            <p class="section-subtitle en-only">Discover my journey and skills</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="fr-only">Technicien Informatique Passionné</h3>
+                    <h3 class="en-only">Passionate IT Technician</h3>
+                    <p class="fr-only">
+                        Technicien informatique bilingue avec plus de 8 ans d'expérience dans le support technique avancé, 
+                        l'administration de systèmes et la gestion d'infrastructures IT. Je me spécialise dans les 
+                        environnements Windows (10/11/Server), Apple (macOS, iOS) et Linux, avec une expertise particulière en 
+                        automatisation, sécurité informatique et gestion du parc informatique. J'intègre également des outils 
+                        d'intelligence artificielle pour optimiser mes workflows et améliorer la productivité.
+                    </p>
+                    <p class="en-only">
+                        Bilingual IT technician with over 8 years of experience in advanced technical support, 
+                        system administration, and IT infrastructure management. I specialize in Windows (10/11/Server), 
+                        Apple (macOS, iOS), and Linux environments, with particular expertise in automation, IT security, and 
+                        asset management. I also integrate artificial intelligence tools to optimize workflows and improve productivity.
+                    </p>
+                    <p class="fr-only">
+                        Ma force réside dans ma capacité à résoudre des problèmes complexes, à former les utilisateurs, 
+                        et à créer une documentation technique claire et efficace. Je suis reconnu pour ma rigueur, 
+                        mon adaptabilité et mon excellent sens du service client.
+                    </p>
+                    <p class="en-only">
+                        My strength lies in my ability to solve complex problems, train users, and create clear and 
+                        effective technical documentation. I'm recognized for my rigor, adaptability, and excellent 
+                        customer service skills.
+                    </p>
+
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="number">8+</div>
+                            <div class="label fr-only">Années d'expérience</div>
+                            <div class="label en-only">Years of Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="number">200+</div>
+                            <div class="label fr-only">Utilisateurs supportés</div>
+                            <div class="label en-only">Users Supported</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="number">30+</div>
+                            <div class="label fr-only">Guides créés</div>
+                            <div class="label en-only">Guides Created</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="number">100%</div>
+                            <div class="label fr-only">Bilingue</div>
+                            <div class="label en-only">Bilingual</div>
+                        </div>
+                    </div>
+
+                    <div class="download-cv-card">
+                        <h4 class="fr-only"><i class="fas fa-download"></i> Télécharger mon CV</h4>
+                        <h4 class="en-only"><i class="fas fa-download"></i> Download my Resume</h4>
+                        <p class="fr-only">Consultez mon parcours complet et mes compétences détaillées</p>
+                        <p class="en-only">View my complete background and detailed skills</p>
+                        <div class="cv-download-buttons">
+                            <a href="CV_Rapha_ONDOBO_Francais.pdf" download class="btn-download btn-download-fr">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Version Française</span>
+                            </a>
+                            <a href="CV_Rapha_ONDOBO_English.pdf" download class="btn-download btn-download-en">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>English Version</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skills-overview">
+                        <h4 class="fr-only"><i class="fas fa-chart-pie"></i> Aperçu des Compétences</h4>
+                        <h4 class="en-only"><i class="fas fa-chart-pie"></i> Skills Overview</h4>
+                        <div class="circular-skills">
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-percent="95">
+                                    <svg width="140" height="140">
+                                        <circle cx="70" cy="70" r="60" class="bg-circle"></circle>
+                                        <circle cx="70" cy="70" r="60" class="progress-circle windows-circle"></circle>
+                                    </svg>
+                                    <div class="percentage">95%</div>
+                                </div>
+                                <p class="skill-label">Windows</p>
+                            </div>
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-percent="93">
+                                    <svg width="140" height="140">
+                                        <circle cx="70" cy="70" r="60" class="bg-circle"></circle>
+                                        <circle cx="70" cy="70" r="60" class="progress-circle apple-circle"></circle>
+                                    </svg>
+                                    <div class="percentage">93%</div>
+                                </div>
+                                <p class="skill-label">macOS/iOS</p>
+                            </div>
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-percent="92">
+                                    <svg width="140" height="140">
+                                        <circle cx="70" cy="70" r="60" class="bg-circle"></circle>
+                                        <circle cx="70" cy="70" r="60" class="progress-circle cloud-circle"></circle>
+                                    </svg>
+                                    <div class="percentage">92%</div>
+                                </div>
+                                <p class="skill-label">Cloud/M365</p>
+                            </div>
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-percent="88">
+                                    <svg width="140" height="140">
+                                        <circle cx="70" cy="70" r="60" class="bg-circle"></circle>
+                                        <circle cx="70" cy="70" r="60" class="progress-circle ai-circle"></circle>
+                                    </svg>
+                                    <div class="percentage">88%</div>
+                                </div>
+                                <p class="skill-label">AI Tools</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-info">
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-user"></i>
+                            <strong class="fr-only">Nom:</strong>
+                            <strong class="en-only">Name:</strong>
+                            <span>Rapha ONDOBO</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong class="fr-only">Ville:</strong>
+                            <strong class="en-only">City:</strong>
+                            <span>Montréal, QC</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <strong class="fr-only">Téléphone:</strong>
+                            <strong class="en-only">Phone:</strong>
+                            <span>514-247-9379</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <strong>Email:</strong>
+                            <span>raphaondobo@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <strong class="fr-only">Diplôme:</strong>
+                            <strong class="en-only">Degree:</strong>
+                            <span class="fr-only">B.Sc. Informatique</span>
+                            <span class="en-only">B.Sc. Computer Science</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-language"></i>
+                            <strong class="fr-only">Langues:</strong>
+                            <strong class="en-only">Languages:</strong>
+                            <span class="fr-only">Français, Anglais, Espagnol</span>
+                            <span class="en-only">French, English, Spanish</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-code"></i>
+                            <strong class="fr-only">Spécialités:</strong>
+                            <strong class="en-only">Specialties:</strong>
+                            <span class="fr-only">Windows, macOS/iOS, IA, MDM/RMM</span>
+                            <span class="en-only">Windows, macOS/iOS, AI, MDM/RMM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title fr-only">Compétences Techniques</h2>
+            <h2 class="section-title en-only">Technical Skills</h2>
+            <p class="section-subtitle fr-only">Mes expertises et technologies maîtrisées</p>
+            <p class="section-subtitle en-only">My expertise and mastered technologies</p>
+            
+            <div class="skills-grid">
+                <!-- OS & Platforms -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> <span class="fr-only">Systèmes d'exploitation</span><span class="en-only">Operating Systems</span></h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Windows 10/11/Server</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>macOS / iOS</span>
+                            <span class="skill-percentage">93%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="93"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Linux (Fedora/Ubuntu)</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & SaaS -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & SaaS</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Microsoft 365 / Azure AD</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Google Workspace</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Active Directory</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MDM & RMM -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> MDM / RMM</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-apple-alt"></i> Addigy</span>
+                        <span class="skill-tag"><i class="fas fa-robot"></i> NinjaOne</span>
+                        <span class="skill-tag"><i class="fab fa-apple"></i> Apple Business Manager</span>
+                        <span class="skill-tag"><i class="fas fa-eye"></i> TeamViewer</span>
+                    </div>
+                </div>
+
+                <!-- Network & Security -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> <span class="fr-only">Réseau & Sécurité</span><span class="en-only">Network & Security</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> TCP/IP</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> DNS/DHCP</span>
+                        <span class="skill-tag"><i class="fas fa-lock"></i> VPN</span>
+                        <span class="skill-tag"><i class="fas fa-key"></i> MFA</span>
+                        <span class="skill-tag"><i class="fas fa-shield-virus"></i> EDR</span>
+                        <span class="skill-tag"><i class="fas fa-wifi"></i> Meraki</span>
+                        <span class="skill-tag"><i class="fas fa-fire"></i> Fortinet</span>
+                    </div>
+                </div>
+
+                <!-- Automation -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> Automation</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>PowerShell</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Shell Script</span>
+                            <span class="skill-percentage">82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="82"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                        <span class="skill-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fab fa-angular"></i> Angular</span>
+                    </div>
+                </div>
+
+                <!-- Support Tools -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> <span class="fr-only">Outils de Support</span><span class="en-only">Support Tools</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-ticket-alt"></i> ServiceNow</span>
+                        <span class="skill-tag"><i class="fas fa-clipboard-list"></i> GLPi</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> ITIL</span>
+                        <span class="skill-tag"><i class="fas fa-shield-alt"></i> Gravity Zone</span>
+                        <span class="skill-tag"><i class="fab fa-microsoft"></i> Teams</span>
+                        <span class="skill-tag"><i class="fab fa-google"></i> Google Meet</span>
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div class="skill-category ai-category">
+                    <h3><i class="fas fa-brain"></i> <span class="fr-only">Intelligence Artificielle</span><span class="en-only">Artificial Intelligence</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-ai"><i class="fas fa-robot"></i> Claude AI</span>
+                        <span class="skill-tag skill-tag-ai"><i class="fas fa-comments"></i> ChatGPT</span>
+                        <span class="skill-tag skill-tag-ai"><i class="fas fa-video"></i> Sora AI</span>
+                        <span class="skill-tag skill-tag-ai"><i class="fas fa-search"></i> Perplexity</span>
+                        <span class="skill-tag skill-tag-ai"><i class="fas fa-magic"></i> Make AI</span>
+                        <span class="skill-tag skill-tag-ai"><i class="fas fa-code"></i> GitHub Copilot</span>
+                    </div>
+                    <p class="ai-description fr-only">
+                        <i class="fas fa-lightbulb"></i> Utilisation d'outils IA pour l'automatisation, la documentation, le scripting et l'amélioration de la productivité IT
+                    </p>
+                    <p class="ai-description en-only">
+                        <i class="fas fa-lightbulb"></i> Using AI tools for automation, documentation, scripting, and IT productivity enhancement
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title fr-only">Expérience Professionnelle</h2>
+            <h2 class="section-title en-only">Professional Experience</h2>
+            <p class="section-subtitle fr-only">Mon parcours et mes réalisations</p>
+            <p class="section-subtitle en-only">My journey and achievements</p>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">
+                            <h3 class="fr-only">Technicien Support & Systèmes</h3>
+                            <h3 class="en-only">Support Technician & System Administrator</h3>
+                            <p class="company">Djiminy Inc.</p>
+                        </div>
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> Sept 2024 - Jan 2025
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <ul class="fr-only">
+                            <li>Support technique niveau 2 pour +100 utilisateurs (Windows, macOS, Microsoft 365)</li>
+                            <li>Automatisation des processus d'onboarding/offboarding via PowerShell et Shell Script</li>
+                            <li>Administration avancée de Microsoft 365, Google Workspace et Active Directory</li>
+                            <li>Création et maintenance de 30+ guides utilisateurs et procédures techniques</li>
+                            <li>Gestion des alertes de sécurité (EDR, MFA, phishing) et incidents complexes</li>
+                            <li>Configuration et gestion MDM/RMM (Addigy, NinjaOne, Apple Business Manager)</li>
+                        </ul>
+                        <ul class="en-only">
+                            <li>Level 2 technical support for 100+ users (Windows, macOS, Microsoft 365)</li>
+                            <li>Automated onboarding/offboarding processes using PowerShell and Shell Script</li>
+                            <li>Advanced administration of Microsoft 365, Google Workspace, and Active Directory</li>
+                            <li>Created and maintained 30+ user guides and technical procedures</li>
+                            <li>Managed security alerts (EDR, MFA, phishing) and complex incidents</li>
+                            <li>Configured and managed MDM/RMM (Addigy, NinjaOne, Apple Business Manager)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">
+                            <h3 class="fr-only">Administrateur Réseau</h3>
+                            <h3 class="en-only">Network Administrator</h3>
+                            <p class="company fr-only">Hôpital Bethesda - Full Gospel Mission</p>
+                            <p class="company en-only">Bethesda Hospital - Full Gospel Mission</p>
+                        </div>
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> Nov 2020 - Mai 2024
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <ul class="fr-only">
+                            <li>Support L2/L3 pour 200+ utilisateurs en environnement multi-sites</li>
+                            <li>Gestion complète du parc informatique (inventaire, lifecycle, disposal)</li>
+                            <li>Administration Windows Server, Active Directory et Linux (Fedora)</li>
+                            <li>Déploiement et sécurisation des réseaux LAN, WAN, WiFi et VPN</li>
+                            <li>Configuration des salles AV/VC (Microsoft Teams, Google Meet)</li>
+                            <li>Formation du personnel et création de 15+ guides techniques</li>
+                        </ul>
+                        <ul class="en-only">
+                            <li>L2/L3 support for 200+ users in multi-site environment</li>
+                            <li>Complete IT asset management (inventory, lifecycle, disposal)</li>
+                            <li>Administered Windows Server, Active Directory, and Linux (Fedora)</li>
+                            <li>Deployed and secured LAN, WAN, WiFi, and VPN networks</li>
+                            <li>Configured AV/VC meeting rooms (Microsoft Teams, Google Meet)</li>
+                            <li>Staff training and creation of 15+ technical guides</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">
+                            <h3 class="fr-only">Technicien Informatique</h3>
+                            <h3 class="en-only">IT Technician</h3>
+                            <p class="company">People Finance (Microfinance)</p>
+                        </div>
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> Sept 2017 - Déc 2019
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <ul class="fr-only">
+                            <li>Support on-site et à distance pour 12 succursales</li>
+                            <li>Installation, configuration et dépannage d'équipements IT</li>
+                            <li>Formation de 100+ employés sur les meilleures pratiques de cybersécurité</li>
+                            <li>Maintenance des serveurs Windows et Linux</li>
+                            <li>Support aux projets digitaux bancaires</li>
+                        </ul>
+                        <ul class="en-only">
+                            <li>On-site and remote support for 12 branch offices</li>
+                            <li>Installation, configuration, and troubleshooting of IT equipment</li>
+                            <li>Trained 100+ employees on cybersecurity best practices</li>
+                            <li>Maintenance of Windows and Linux servers</li>
+                            <li>Support for digital banking projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div style="margin-top: 5rem;">
+                <h3 style="text-align: center; color: var(--primary); margin-bottom: 3rem; font-size: 2.5rem;">
+                    <span class="fr-only">Certifications & Formation</span>
+                    <span class="en-only">Certifications & Education</span>
+                </h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4 class="fr-only">B.Sc. Génie Logiciel</h4>
+                        <h4 class="en-only">B.Sc. Computer Science</h4>
+                        <p class="fr-only">Université de Yaoundé I (2018)</p>
+                        <p class="en-only">University of Yaoundé I (2018)</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fab fa-apple"></i></div>
+                        <h4>Addigy Certification</h4>
+                        <p>2024</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>ISC2 Security Principles</h4>
+                        <p>2024</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fab fa-google"></i></div>
+                        <h4>IT Support Fundamental</h4>
+                        <p>Google - 2024</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                        <h4>Fortinet NSE 1, 2, 3</h4>
+                        <p>2023</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-users"></i></div>
+                        <h4 class="fr-only">Mentorat & Formation</h4>
+                        <h4 class="en-only">Mentorship & Training</h4>
+                        <p class="fr-only">Tuteur - 3 ans</p>
+                        <p class="en-only">Tutor - 3 years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title fr-only">Projets & Réalisations</h2>
+            <h2 class="section-title en-only">Projects & Achievements</h2>
+            <p class="section-subtitle fr-only">Quelques projets marquants de ma carrière</p>
+            <p class="section-subtitle en-only">Some notable projects from my career</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="fr-only">Automatisation des Processus IT</h3>
+                    <h3 class="en-only">IT Process Automation</h3>
+                    <p class="fr-only">
+                        Développement de scripts PowerShell et Shell pour automatiser l'onboarding/offboarding 
+                        des utilisateurs, réduisant le temps de traitement de 75%.
+                    </p>
+                    <p class="en-only">
+                        Developed PowerShell and Shell scripts to automate user onboarding/offboarding, 
+                        reducing processing time by 75%.
+                    </p>
+                    <div class="project-tags">
+                        <span><i class="fas fa-code"></i> PowerShell</span>
+                        <span><i class="fas fa-terminal"></i> Shell Script</span>
+                        <span><i class="fab fa-microsoft"></i> M365</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>-75%</strong>
+                            <span class="fr-only">Temps économisé</span>
+                            <span class="en-only">Time saved</span>
+                        </div>
+                        <div class="stat">
+                            <strong>100+</strong>
+                            <span class="fr-only">Utilisateurs/mois</span>
+                            <span class="en-only">Users/month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="fr-only">Infrastructure Sécurisée Multi-Sites</h3>
+                    <h3 class="en-only">Secure Multi-Site Infrastructure</h3>
+                    <p class="fr-only">
+                        Déploiement d'une infrastructure réseau sécurisée (LAN/WAN/VPN) pour un hôpital 
+                        avec 200+ utilisateurs répartis sur plusieurs bâtiments.
+                    </p>
+                    <p class="en-only">
+                        Deployed secure network infrastructure (LAN/WAN/VPN) for a hospital 
+                        with 200+ users across multiple buildings.
+                    </p>
+                    <div class="project-tags">
+                        <span><i class="fas fa-network-wired"></i> Networking</span>
+                        <span><i class="fas fa-lock"></i> VPN</span>
+                        <span><i class="fas fa-wifi"></i> Meraki</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>200+</strong>
+                            <span class="fr-only">Utilisateurs</span>
+                            <span class="en-only">Users</span>
+                        </div>
+                        <div class="stat">
+                            <strong>99.9%</strong>
+                            <span class="fr-only">Uptime</span>
+                            <span class="en-only">Uptime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3 class="fr-only">Gestion MDM Apple Business Manager</h3>
+                    <h3 class="en-only">Apple Business Manager MDM</h3>
+                    <p class="fr-only">
+                        Configuration et gestion complète d'un environnement Apple avec Addigy (MDM) et 
+                        Apple Business Manager pour 100+ appareils macOS et iOS.
+                    </p>
+                    <p class="en-only">
+                        Complete configuration and management of Apple environment with Addigy (MDM) and 
+                        Apple Business Manager for 100+ macOS and iOS devices.
+                    </p>
+                    <div class="project-tags">
+                        <span><i class="fab fa-apple"></i> Addigy</span>
+                        <span><i class="fas fa-mobile-alt"></i> MDM</span>
+                        <span><i class="fas fa-laptop"></i> macOS</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>100+</strong>
+                            <span class="fr-only">Appareils</span>
+                            <span class="en-only">Devices</span>
+                        </div>
+                        <div class="stat">
+                            <strong>-60%</strong>
+                            <span class="fr-only">Incidents</span>
+                            <span class="en-only">Incidents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="fr-only">Documentation Technique Complète</h3>
+                    <h3 class="en-only">Complete Technical Documentation</h3>
+                    <p class="fr-only">
+                        Création de 30+ guides utilisateurs et procédures techniques (onboarding, M365, VPN, 
+                        sécurité) utilisés quotidiennement par l'équipe IT et les utilisateurs.
+                    </p>
+                    <p class="en-only">
+                        Created 30+ user guides and technical procedures (onboarding, M365, VPN, 
+                        security) used daily by IT team and users.
+                    </p>
+                    <div class="project-tags">
+                        <span><i class="fas fa-file-alt"></i> Documentation</span>
+                        <span><i class="fas fa-users"></i> Formation</span>
+                        <span><i class="fas fa-chalkboard-teacher"></i> SOPs</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>30+</strong>
+                            <span class="fr-only">Guides</span>
+                            <span class="en-only">Guides</span>
+                        </div>
+                        <div class="stat">
+                            <strong>100+</strong>
+                            <span class="fr-only">Formés</span>
+                            <span class="en-only">Trained</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="fr-only">Intégration IA dans les Workflows IT</h3>
+                    <h3 class="en-only">AI Integration in IT Workflows</h3>
+                    <p class="fr-only">
+                        Utilisation d'outils IA (Claude, ChatGPT, Make AI) pour optimiser la création de scripts, 
+                        la documentation et la résolution de problèmes complexes.
+                    </p>
+                    <p class="en-only">
+                        Using AI tools (Claude, ChatGPT, Make AI) to optimize script creation, 
+                        documentation, and complex problem solving.
+                    </p>
+                    <div class="project-tags">
+                        <span><i class="fas fa-robot"></i> Claude AI</span>
+                        <span><i class="fas fa-comments"></i> ChatGPT</span>
+                        <span><i class="fas fa-magic"></i> Make AI</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>+40%</strong>
+                            <span class="fr-only">Productivité</span>
+                            <span class="en-only">Productivity</span>
+                        </div>
+                        <div class="stat">
+                            <strong>-50%</strong>
+                            <span class="fr-only">Temps création</span>
+                            <span class="en-only">Creation time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="fr-only">Formation Cybersécurité Entreprise</h3>
+                    <h3 class="en-only">Corporate Cybersecurity Training</h3>
+                    <p class="fr-only">
+                        Formation de 100+ employés sur les meilleures pratiques de cybersécurité, 
+                        réduisant les incidents de sécurité de 70%.
+                    </p>
+                    <p class="en-only">
+                        Trained 100+ employees on cybersecurity best practices, 
+                        reducing security incidents by 70%.
+                    </p>
+                    <div class="project-tags">
+                        <span><i class="fas fa-shield-virus"></i> Sécurité</span>
+                        <span><i class="fas fa-user-shield"></i> MFA</span>
+                        <span><i class="fas fa-fish"></i> Anti-phishing</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>-70%</strong>
+                            <span class="fr-only">Incidents</span>
+                            <span class="en-only">Incidents</span>
+                        </div>
+                        <div class="stat">
+                            <strong>100+</strong>
+                            <span class="fr-only">Employés</span>
+                            <span class="en-only">Employees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title fr-only">Témoignages & Recommandations</h2>
+            <h2 class="section-title en-only">Testimonials & Recommendations</h2>
+            <p class="section-subtitle fr-only">Ce que disent mes collègues et superviseurs</p>
+            <p class="section-subtitle en-only">What my colleagues and supervisors say</p>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text fr-only">
+                        "Rapha est un technicien exceptionnel qui combine expertise technique et excellent service client. 
+                        Sa capacité à résoudre des problèmes complexes et à former les utilisateurs est remarquable. 
+                        Il a transformé notre infrastructure IT avec ses scripts d'automatisation."
+                    </p>
+                    <p class="testimonial-text en-only">
+                        "Rapha is an exceptional technician who combines technical expertise and excellent customer service. 
+                        His ability to solve complex problems and train users is remarkable. 
+                        He transformed our IT infrastructure with his automation scripts."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Jean-Marc Dubois</strong>
+                            <p class="fr-only">Directeur IT - Djiminy Inc.</p>
+                            <p class="en-only">IT Director - Djiminy Inc.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text fr-only">
+                        "Un professionnel rigoureux et dévoué. Rapha a géré avec brio notre migration vers Microsoft 365 
+                        et la mise en place du MDM pour nos appareils Apple. Son expertise en automatisation nous a 
+                        fait économiser des centaines d'heures de travail manuel."
+                    </p>
+                    <p class="testimonial-text en-only">
+                        "A rigorous and dedicated professional. Rapha brilliantly managed our migration to Microsoft 365 
+                        and MDM setup for our Apple devices. His automation expertise saved us 
+                        hundreds of hours of manual work."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Dr. Sarah Mballa</strong>
+                            <p class="fr-only">Chef de département - Hôpital Bethesda</p>
+                            <p class="en-only">Department Head - Bethesda Hospital</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text fr-only">
+                        "Rapha a une approche pédagogique exceptionnelle. Il a formé toute notre équipe aux bonnes 
+                        pratiques de sécurité informatique et a créé des guides clairs et détaillés. Son bilinguisme 
+                        est un atout majeur dans notre environnement multiculturel."
+                    </p>
+                    <p class="testimonial-text en-only">
+                        "Rapha has an exceptional teaching approach. He trained our entire team on IT security 
+                        best practices and created clear and detailed guides. His bilingualism 
+                        is a major asset in our multicultural environment."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Marie-Claire Tremblay</strong>
+                            <p class="fr-only">Responsable RH - People Finance</p>
+                            <p class="en-only">HR Manager - People Finance</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-btn" onclick="changeTestimonial(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="setTestimonial(0)"></span>
+                    <span class="dot" onclick="setTestimonial(1)"></span>
+                    <span class="dot" onclick="setTestimonial(2)"></span>
+                </div>
+                <button class="slider-btn" onclick="changeTestimonial(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fr-only">Contactez-Moi</h2>
+            <h2 class="section-title en-only">Contact Me</h2>
+            <p class="section-subtitle fr-only">Discutons de votre projet ou opportunité</p>
+            <p class="section-subtitle en-only">Let's discuss your project or opportunity</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="fr-only">Informations de Contact</h3>
+                    <h3 class="en-only">Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong class="fr-only">Localisation</strong>
+                            <strong class="en-only">Location</strong>
+                            <p>Montréal-Nord, QC H1R 2X7</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong class="fr-only">Téléphone</strong>
+                            <strong class="en-only">Phone</strong>
+                            <p><a href="tel:5142479379">514-247-9379</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:raphaondobo@gmail.com">raphaondobo@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <p><a href="https://linkedin.com/in/rapha-ondobo" target="_blank">linkedin.com/in/rapha-ondobo</a></p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+                        <h4 class="fr-only" style="margin-bottom: 1rem; font-size: 1.3rem;">Disponibilité</h4>
+                        <h4 class="en-only" style="margin-bottom: 1rem; font-size: 1.3rem;">Availability</h4>
+                        <p class="fr-only">Disponible pour des opportunités à temps plein ou contrat à Montréal et région. Ouvert au télétravail et positions hybrides.</p>
+                        <p class="en-only">Available for full-time or contract opportunities in Montreal and surrounding areas. Open to remote and hybrid positions.</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 class="fr-only">Envoyez-moi un message</h3>
+                    <h3 class="en-only">Send me a message</h3>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name" class="fr-only">Nom complet *</label>
+                            <label for="name" class="en-only">Full name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom / Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="fr-only">Sujet *</label>
+                            <label for="subject" class="en-only">Subject *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Sujet du message / Message subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Votre message... / Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span class="fr-only">Envoyer le message</span>
+                            <span class="en-only">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rapha ONDOBO. <span class="fr-only">Tous droits réservés.</span><span class="en-only">All rights reserved.</span></p>
+        <div class="footer-social">
+            <a href="https://linkedin.com/in/rapha-ondobo" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:raphaondobo@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:5142479379"><i class="fas fa-phone"></i></a>
+            <a href="https://github.com/raphaondobo" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
