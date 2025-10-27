@@ -31,6 +31,18 @@
     box-sizing: border-box;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -90,6 +102,7 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -112,6 +125,7 @@ nav .container {
     list-style: none;
     gap: 2rem;
     align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-links a {
@@ -152,11 +166,19 @@ nav .container {
     font-weight: 600;
     transition: all 0.3s;
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .lang-switch:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.lang-switch .lang-label {
+    font-weight: 700;
+    letter-spacing: 0.05em;
 }
 
 .theme-toggle {
@@ -189,6 +211,41 @@ nav .container {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--primary);
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    line-height: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+}
+
+.mobile-menu[aria-expanded="true"] {
+    color: var(--secondary);
+    transform: rotate(90deg);
+}
+
+.nav-links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 25px 40px rgba(15, 23, 42, 0.15);
+    z-index: 999;
+}
+
+.nav-links.open li {
+    width: 100%;
+    text-align: center;
 }
 
 /* Hero Section */
