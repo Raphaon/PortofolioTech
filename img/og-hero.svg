@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A192F"/>
+      <stop offset="100%" stop-color="#102A43"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64FFDA"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="60" y="80" width="380" height="220" rx="32" fill="rgba(15,34,63,0.9)" stroke="#64FFDA" stroke-width="6"/>
+  <rect x="480" y="120" width="660" height="180" rx="32" fill="rgba(15,34,63,0.75)" stroke="#4F46E5" stroke-width="4"/>
+  <text x="90" y="150" fill="#64FFDA" font-family="Poppins, Arial" font-size="46" font-weight="700">Rapha ONDOBO</text>
+  <text x="90" y="210" fill="#E6F1FF" font-family="Inter, Arial" font-size="32">IT Systems &amp; Support Expert</text>
+  <text x="90" y="260" fill="#94A3B8" font-family="Inter, Arial" font-size="26">Automation · Cloud · Cybersecurity</text>
+  <text x="90" y="560" fill="#64FFDA" font-family="Inter, Arial" font-size="28">raphaondobo.com</text>
+  <rect x="60" y="320" width="1080" height="200" rx="40" fill="rgba(15,34,63,0.8)" stroke="url(#accent)" stroke-width="3"/>
+  <text x="100" y="400" fill="#E6F1FF" font-family="Inter, Arial" font-size="34">J'aide les PME à sécuriser et automatiser leur IT.</text>
+  <text x="100" y="455" fill="#94A3B8" font-family="Inter, Arial" font-size="26">Montréal · Bilingue · Disponible pour de nouvelles missions</text>
+</svg>
