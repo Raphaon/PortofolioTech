@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="pf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb347"/>
+      <stop offset="100%" stop-color="#ff5f6d"/>
+    </linearGradient>
+    <linearGradient id="pf-mark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="26" fill="url(#pf-bg)"/>
+  <path d="M60 30c-16.6 0-30 13.4-30 30s13.4 30 30 30 30-13.4 30-30S76.6 30 60 30zm0 12c9.9 0 18 8.1 18 18s-8.1 18-18 18-18-8.1-18-18 8.1-18 18-18z" fill="rgba(15, 27, 56, 0.22)"/>
+  <path d="M47.5 53.5c0-6.8 5.5-12.3 12.3-12.3 3.7 0 7 1.6 9.2 4.2l5.4-5.4c-3.8-4.3-9.3-7-15.3-7-11.4 0-20.7 9.3-20.7 20.7 0 6 2.6 11.4 6.7 15.2l5.4-5.4c-2.7-2.2-4.2-5.5-4.2-9.2z" fill="#fff" opacity="0.9"/>
+  <path d="M72.5 66.5c0 6.8-5.5 12.3-12.3 12.3-3.7 0-7-1.6-9.2-4.2l-5.4 5.4c3.8 4.3 9.3 7 15.3 7 11.4 0 20.7-9.3 20.7-20.7 0-6-2.6-11.4-6.7-15.2l-5.4 5.4c2.7 2.2 4.2 5.5 4.2 9.2z" fill="url(#pf-mark)"/>
+  <text x="60" y="100" text-anchor="middle" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="600" font-size="16" fill="#311b0b">People Finance</text>
+</svg>
