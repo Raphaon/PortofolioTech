@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="dj" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A192F"/>
+      <stop offset="100%" stop-color="#64FFDA"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="#0f172a"/>
+  <circle cx="60" cy="40" r="18" fill="#64FFDA" opacity="0.85"/>
+  <path d="M38 70h44c10 0 16 6 16 15v13H22V85c0-9 6-15 16-15z" fill="url(#dj)"/>
+  <text x="60" y="96" font-family="Poppins, Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="700">Djiminy</text>
+</svg>
